@@ -1,0 +1,6 @@
+{
+  "error-with-status": "服务器错误（错误码{{statusCode}}）",
+  "error-without-status": "服务器错误",
+  "nav-home": "首页",
+  "nav-about": "关于我们"
+}
