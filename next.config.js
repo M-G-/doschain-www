@@ -6,11 +6,11 @@ module.exports = withSass({
   //   importLoaders: 1,
   //   localIdentName: "[local]___[hash:base64:5]",
   // }
-  exportPathMap: async function (defaultPathMap) {
-    return {
-      '/': { page: '/' },
-      '/about': { page: '/about' },
-    }
-  }
+  // exportPathMap: async function (defaultPathMap) {
+  //   return {
+  //     '/': { page: '/' },
+  //     '/about': { page: '/about' },
+  //   }
+  // }
 })
 
