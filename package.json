@@ -4,9 +4,9 @@
   "description": "doschain website",
   "main": "index.js",
   "scripts": {
-    "dev": "next",
+    "dev": "cross-env NODE_ENV=development PORT=80 node server.js",
     "build": "next build",
-    "start": "NODE_ENV=production node server.js",
+    "start": "cross-env NODE_ENV=production PORT=80 node server.js",
     "start-aliyun": "nohup npm run start &",
     "export": "next export",
     "static-run": "next export && serve out"
@@ -30,7 +30,9 @@
   },
   "devDependencies": {
     "boxen": "^4.1.0",
+    "cross-env": "^6.0.3",
     "express": "^4.17.1",
+    "http-proxy-middleware": "^0.20.0",
     "serve": "^11.2.0"
   }
 }
