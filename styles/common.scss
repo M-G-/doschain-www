@@ -18,7 +18,7 @@ time, mark, audio, video {
   //font-size: 100%;
   //font: inherit;
   vertical-align: baseline;
-  color: #333;
+  //color: #333;
 }
 /* HTML5 display-role reset for older browsers */
 article, aside, details, figcaption, figure,
@@ -51,12 +51,12 @@ table {
 }
 
 body{
-  background: #e9e9e9;
+  //background: #e9e9e9;
   //background: #333;
 }
 
 .center-block{
-  max-width: 1200px;
+  width: 1200px;
   margin-left: auto;
   margin-right: auto;
   padding-left: 15px;
