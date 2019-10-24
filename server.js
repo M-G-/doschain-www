@@ -12,7 +12,7 @@ const handle = app.getRequestHandler();
 
 const devProxy = {
   '/huobi_api': {
-    target: 'https://api.huobi.pro/',
+    target: 'https://api.huobi.pro',
     pathRewrite: { '^/huobi_api': '/' },
     changeOrigin: true
   }
