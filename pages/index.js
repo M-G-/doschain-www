@@ -10,7 +10,7 @@ function hasErrors(fieldsError) {
   return Object.keys(fieldsError).some(field => fieldsError[field]);
 }
 
-const apiRoot = 'http://api.m.doschain.org/monitoring';
+const apiRoot = 'http://api.m.doschain.org';
 
 class Homepage extends React.Component{
 
@@ -29,7 +29,8 @@ class Homepage extends React.Component{
     this.setState({aData: null})
 
     // axios.get('https://blockchain.info/ticker').then(({data}) =>{
-    axios.get(`${location.origin}/huobi_api/market/history/trade?symbol=btcusdt&size=1`).then(({data: _data}) =>{
+    // axios.get(`${location.origin}/huobi_api/market/history/trade?symbol=btcusdt&size=1`).then(({data: _data}) =>{
+    axios.get(`${apiRoot}/huobi_api/market/history/trade?symbol=btcusdt&size=1`).then(({data: _data}) =>{
       // const {data}
       const {status, data} = _data
       console.log(data)
@@ -43,7 +44,7 @@ class Homepage extends React.Component{
   }
 
   getList = () => {
-    axios.get(`${apiRoot}/warn/get-price`).then(({data: _data}) =>{
+    axios.get(`${apiRoot}/monitoring/warn/get-price`).then(({data: _data}) =>{
       console.log(_data)
       const {data, errno, errmsg} = _data
 
@@ -75,7 +76,7 @@ class Homepage extends React.Component{
   }
 
   deleteItem = (amount) => {
-    axios.get(`${apiRoot}/warn/del-price?price=${amount}`).then(({data: _data}) =>{
+    axios.get(`${apiRoot}/monitoring/warn/del-price?price=${amount}`).then(({data: _data}) =>{
       console.log(_data)
       const {data, errno, errmsg} = _data
 
@@ -203,7 +204,7 @@ class AddModal extends React.Component {
       // setTimeout(() => {
       //
       // }, 2000);
-      axios.get(`${apiRoot}/warn/price?price=${value}`).then(({data: _data}) =>{
+      axios.get(`${apiRoot}/monitoring/warn/price?price=${value}`).then(({data: _data}) =>{
         console.log(_data)
         const {data, errno, errmsg} = _data
 

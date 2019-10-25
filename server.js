@@ -10,25 +10,25 @@ const dev = env !== 'production'
 const app = next({ dev: dev})
 const handle = app.getRequestHandler();
 
-const devProxy = {
-  '/huobi_api': {
-    target: 'https://api.huobi.pro',
-    pathRewrite: { '^/huobi_api': '/' },
-    changeOrigin: true
-  }
-};
+// const devProxy = {
+//   '/huobi_api': {
+//     target: 'https://api.huobi.pro',
+//     pathRewrite: { '^/huobi_api': '/' },
+//     changeOrigin: true
+//   }
+// };
 
 
 (async () => {
   await app.prepare()
   const server = express()
 
-  if (devProxy) {
-    const proxyMiddleware = require('http-proxy-middleware')
-    Object.keys(devProxy).forEach(function (context) {
-      server.use(proxyMiddleware(context, devProxy[context]))
-    })
-  }
+  // if (devProxy) {
+  //   const proxyMiddleware = require('http-proxy-middleware')
+  //   Object.keys(devProxy).forEach(function (context) {
+  //     server.use(proxyMiddleware(context, devProxy[context]))
+  //   })
+  // }
 
   server.use(nextI18NextMiddleware(nextI18next))
 
