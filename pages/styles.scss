@@ -4,6 +4,7 @@
 
   .center-block{
     position: relative;
+    box-sizing: border-box;
   }
 
   .ft{
@@ -56,7 +57,7 @@
     width: 726px;
     height: 549px;
     background: url('/static/images/home_curve_1.png');
-    left: 868px;
+    left: 848px;
     top: 80px;
     animation: move 3s linear infinite;
     -webkit-mask: radial-gradient(200px, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
@@ -67,7 +68,7 @@
     width: 888px;
     height: 592px;
     background: url('/static/images/home_curve_2.png');
-    left: -330px;
+    left: -346px;
     top: 0;
     animation: move2 3.5s linear infinite;
     -webkit-mask: radial-gradient(200px, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
@@ -78,7 +79,7 @@
     width: 609px;
     height: 212px;
     background: url('/static/images/home_curve_3.png');
-    left: 158px;
+    left: 144px;
     top: 418px;
     animation: move3 3s linear infinite;
     -webkit-mask: radial-gradient(140px, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
