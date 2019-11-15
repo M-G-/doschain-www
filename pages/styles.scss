@@ -2,11 +2,17 @@
   height: 629px;
   background: url('/static/images/home_banner_bg.jpg') center #270d52 no-repeat;
 
+  .center-block{
+    position: relative;
+  }
+
   .ft{
     display: block;
     line-height: 1;
     margin: 0 auto;
     padding-top: 86px;
+    position: relative;
+    z-index: 2;
   }
 
   .cd{
@@ -14,6 +20,8 @@
     text-align: center;
     line-height: 40px;
     margin-top: -96px;
+    position: relative;
+    z-index: 2;
 
     .time{
       font-size: 40px;
@@ -27,6 +35,8 @@
   .bt{
     text-align: center;
     margin-top: 72px;
+    position: relative;
+    z-index: 2;
 
     a{
       display: inline-block;
@@ -39,5 +49,80 @@
       background-color: #4d1a82;
       text-decoration: none;
     }
+  }
+
+  .curve{
+    position: absolute;
+    width: 726px;
+    height: 549px;
+    background: url('/static/images/home_curve_1.png');
+    left: 868px;
+    top: 80px;
+    animation: move 3s linear infinite;
+    -webkit-mask: radial-gradient(200px, rgba(0, 0, 0, 1), rgba(0, 0, 0, 0));
+  }
+
+  .curve2{
+    position: absolute;
+    width: 888px;
+    height: 592px;
+    background: url('/static/images/home_curve_2.png');
+    left: -330px;
+    top: 0;
+    animation: move2 3.5s linear infinite;
+    -webkit-mask: radial-gradient(200px, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .curve3{
+    position: absolute;
+    width: 609px;
+    height: 212px;
+    background: url('/static/images/home_curve_3.png');
+    left: 158px;
+    top: 418px;
+    animation: move3 3s linear infinite;
+    -webkit-mask: radial-gradient(140px, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+  }
+
+  .mask{
+    width: 100px;
+    height: 100px;
+    background-image: radial-gradient(closest-side, rgba(255, 255, 255, 1), rgba(255, 255, 255, 0));
+    //background-size: contain;
+    background-repeat: no-repeat;
+    //background-position: center;
+    //border-radius: 50%;
+    position: absolute;
+    top: 0;
+    left: 150px;
+
+
+  }
+}
+
+@keyframes move {
+  0% {
+    -webkit-mask-position: 363px -275px;
+  }
+  100% {
+    -webkit-mask-position: -363px 275px;
+  }
+}
+
+@keyframes move2 {
+  0% {
+    -webkit-mask-position: -444px 296px;
+  }
+  100% {
+    -webkit-mask-position: 444px -296px;
+  }
+}
+
+@keyframes move3 {
+  0% {
+    -webkit-mask-position: -305px 101px;
+  }
+  100% {
+    -webkit-mask-position: 305px -101px;
   }
 }

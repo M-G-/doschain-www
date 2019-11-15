@@ -37,15 +37,21 @@ class Banner extends React.Component{
 
     return(
       <div className='home-banner'>
-        <img src='/static/images/home_banner_ft.jpg' className='ft'/>
-        <p className='cd'>
-          主网上线倒计时
-          <span className='time'>00 : 22 : 00</span>
-        </p>
-        <div className='bt'>
-          <a href='/'>已发放DOS</a>
-          <a href='/'>已销毁DOS</a>
+        <div className='center-block'>
+          <img src='/static/images/home_banner_ft.jpg' className='ft'/>
+          <p className='cd'>
+            主网上线倒计时
+            <span className='time'>00 : 22 : 00</span>
+          </p>
+          <div className='bt'>
+            <a href='/'>已发放DOS</a>
+            <a href='/'>已销毁DOS</a>
+          </div>
+          <div className='curve' />
+          <div className='curve2' />
+          <div className='curve3' />
         </div>
+
         {/*<canvas id="myCanvas" width="400" height="200"/>*/}
       </div>
     );
