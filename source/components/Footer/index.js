@@ -1,6 +1,6 @@
 import React from 'react'
 import PropTypes from 'prop-types'
-import { withTranslation } from '../../i18n'
+import { withTranslation } from '../../../i18n'
 import './index.scss'
 
 class Footer extends React.Component {

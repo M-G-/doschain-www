@@ -1,0 +1,43 @@
+.home-banner{
+  height: 629px;
+  background: url('/static/images/home_banner_bg.jpg') center #270d52 no-repeat;
+
+  .ft{
+    display: block;
+    line-height: 1;
+    margin: 0 auto;
+    padding-top: 86px;
+  }
+
+  .cd{
+    color: #fff;
+    text-align: center;
+    line-height: 40px;
+    margin-top: -96px;
+
+    .time{
+      font-size: 40px;
+      line-height: 40px;
+      vertical-align: middle;
+      display: inline-block;
+      margin-left: 20px;
+    }
+  }
+
+  .bt{
+    text-align: center;
+    margin-top: 72px;
+
+    a{
+      display: inline-block;
+      height: 30px;
+      line-height: 30px;
+      color: #fff;
+      padding: 0 20px;
+      border-radius: 5px;
+      margin: 0 14px;
+      background-color: #4d1a82;
+      text-decoration: none;
+    }
+  }
+}

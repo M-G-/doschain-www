@@ -1,6 +1,6 @@
 import React from 'react'
-import Header from '../Header'
-import Footer from '../Footer'
+import Header from '../Header/index'
+import Footer from '../Footer/index'
 import Head from 'next/head'
 import '../../styles/common.scss'
 import './index.scss'
@@ -18,7 +18,7 @@ export default class BasicLayout extends React.Component{
         </Head>
         <div className='c-basicLayout-top'>
           <Header />
-          <div className='c-basicLayout-content center-block'>
+          <div className='c-basicLayout-content'>
             {this.props.children}
           </div>
         </div>
